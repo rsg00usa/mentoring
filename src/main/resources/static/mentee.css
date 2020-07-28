@@ -1,0 +1,31 @@
+/* Register Page CSS */
+
+h1 {
+  line-height: 2em;
+}
+
+table {
+    background: #FAFAFA;
+    border: 6px solid #305A72;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-collapse: collapse;
+    margin: auto;
+    width: 25%;
+}
+
+th, td {
+    background: #FAFAFA;
+    border-collapse: collapse;
+    border: 1px solid #305A72;
+    padding: 4px;
+}
+
+input[type="submit"] {
+    text-align: center;
+    margin: 5px auto; 
+    display:block;
+    background-color: #216288;
+	border: 1px solid #17445E;
+	color: #FFFFFF;
+    padding: 8px 18px;
+}

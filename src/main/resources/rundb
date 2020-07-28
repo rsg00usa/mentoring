@@ -1,0 +1,7 @@
+if [[ $1 == "start" ]]; then
+    echo "Starting postgres"
+    pg_ctl -D /usr/local/var/postgres start
+else 
+    echo "Stopping postgres"
+    pg_ctl -D /usr/local/var/postgres stop
+fi

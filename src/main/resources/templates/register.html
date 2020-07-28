@@ -1,0 +1,44 @@
+{{>header}}
+{{>navbar}}
+<body>
+    <h1>Mentoring Registration</h1>
+    <form class="reg-form" action="/register" method="post">
+        <ul>
+            <li>
+                <input type="text" class="field-style align-left" name="firstName" placeholder="First Name" />
+                <input type="text" class="field-style align-right" name="lastName" placeholder="Last Name" />
+            </li>
+            <li>
+                <input type="email" class="field-style" name="email" placeholder="Email" />
+            </li>
+            <li>
+                <select class="field-style" name="title">
+                    <option value="">Title</option>
+                    <option value="AMTS">AMTS</option>
+                    <option value="MTS">MTS</option>
+                    <option value="SMTS">SMTS</option>
+                    <option value="LMTS">LMTS</option>
+                    <option value="ARCH">Architect</option>
+                    <option value="SrARCH">Sr. Architect</option>
+                    <option value="MGR">Manager</option>
+                    <option value="SrMGR ">Sr. Manager</option>
+                    <option value="DIR">Director</option>
+                    <option value="SrDIR">Sr. Driector</option>
+                    <option value="other">Other</option>
+                </select>    
+            </li>
+            <li>
+                <input type="text" class="field-style" name="team" placeholder="Team" />
+            </li>
+            <li>
+                <input type="checkbox" name="mentor" value="true"> Be a Mentor
+                <input type="checkbox" name="mentee" value="true"> Be a Mentee
+                <span class="span-checkbox">(can choose both)</span>
+            </li>
+            <li>
+                <input type="submit" value="Register" />
+                <span class="span-submit">All information is required</span>
+            </li>
+        </ul>
+    </form>
+</body>
