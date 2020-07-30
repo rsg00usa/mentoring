@@ -3,25 +3,27 @@
 <body>
     <h1>List of Mentors</h1>
     <br><br>
-    <table>
-        <thead>
-            <tr>
-                <th>Select</th>
-                <th>Name</th>
-                <th>Title</th>
-                <th>Team</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#mentors}}
-            <tr>
-                <td><input type="checkbox" name="mentee" value="true"></td>
-                <td>{{firstName}} {{lastName}}</td>
-                <td>{{title}}</td>
-                <td>{{team}}</td>
-            </tr>
-            {{/mentors}}
-        </tbody>
-    </table>
-    <input type="submit" value="Confirm" />
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#mentors}}
+                <tr>
+                    <td><input type="checkbox" name="mentee" value="true"></td>
+                    <td>{{firstName}} {{lastName}}</td>
+                    <td>{{title}}</td>
+                    <td>{{team}}</td>
+                </tr>
+                {{/mentors}}
+            </tbody>
+        </table>
+        <input type="submit" value="Confirm" />
+    </form>
 </body>
