@@ -1,34 +1,24 @@
-package org.sglaser.mentor.model;
+package org.sglaser.mentor.dto;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
-public class Employee {
-
-    @Column(name = "firstname")
+public class EmployeeRegistrationDto {
+    
     private String firstName;
-    @Column(name = "lastname")
     private String lastName;
-    @Id
     private String email;
     private String password;
-    private String title;    
+    private String title;
     private String team;
-    @Column(name = "bementor")
     private String beMentor;
-    @Column(name = "bementee")
     private String beMentee;
-    @Column(name = "registerdate")
     private LocalDate regDate;
 
-    public Employee() {
+    public EmployeeRegistrationDto() {
     }
 
-    public Employee(String firstName, String lastName, String email, String password, String title, String team, String beMentor, String beMentee, LocalDate regDate) {
+    public EmployeeRegistrationDto(String firstName, String lastName, String email, String password, String title, String team, String beMentor, String beMentee, LocalDate regDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -112,49 +102,65 @@ public class Employee {
         this.regDate = regDate;
     }
 
-    public Employee firstName(String firstName) {
+    public EmployeeRegistrationDto firstName(String firstName) {
         setFirstName(firstName);
         return this;
     }
 
-    public Employee lastName(String lastName) {
+    public EmployeeRegistrationDto lastName(String lastName) {
         setLastName(lastName);
         return this;
     }
 
-    public Employee email(String email) {
+    public EmployeeRegistrationDto email(String email) {
         setEmail(email);
         return this;
     }
 
-    public Employee password(String password) {
+    public EmployeeRegistrationDto password(String password) {
         setPassword(password);
         return this;
     }
 
-    public Employee title(String title) {
+    public EmployeeRegistrationDto title(String title) {
         setTitle(title);
         return this;
     }
 
-    public Employee team(String team) {
+    public EmployeeRegistrationDto team(String team) {
         setTeam(team);
         return this;
     }
 
-    public Employee beMentor(String beMentor) {
+    public EmployeeRegistrationDto beMentor(String beMentor) {
         setBeMentor(beMentor);
         return this;
     }
 
-    public Employee beMentee(String beMentee) {
+    public EmployeeRegistrationDto beMentee(String beMentee) {
         setBeMentee(beMentee);
         return this;
     }
 
-    public Employee regDate(LocalDate regDate) {
+    public EmployeeRegistrationDto regDate(LocalDate regDate) {
         setRegDate(regDate);
         return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof EmployeeRegistrationDto)) {
+            return false;
+        }
+        EmployeeRegistrationDto employeeRegistrationDto = (EmployeeRegistrationDto) o;
+        return Objects.equals(firstName, employeeRegistrationDto.firstName) && Objects.equals(lastName, employeeRegistrationDto.lastName) && Objects.equals(email, employeeRegistrationDto.email) && Objects.equals(password, employeeRegistrationDto.password) && Objects.equals(title, employeeRegistrationDto.title) && Objects.equals(team, employeeRegistrationDto.team) && Objects.equals(beMentor, employeeRegistrationDto.beMentor) && Objects.equals(beMentee, employeeRegistrationDto.beMentee) && Objects.equals(regDate, employeeRegistrationDto.regDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, email, password, title, team, beMentor, beMentee, regDate);
     }
 
     @Override
@@ -170,5 +176,5 @@ public class Employee {
             ", beMentee='" + getBeMentee() + "'" +
             ", regDate='" + getRegDate() + "'" +
             "}";
-    }    
+    }
 }

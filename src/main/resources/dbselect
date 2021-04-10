@@ -1,1 +1,0 @@
-psql -d mentor -c "select * from employee"

@@ -1,0 +1,4 @@
+* login
+  - ability for users to login with their email address and passwd
+* create custom login page
+* create custom logout page

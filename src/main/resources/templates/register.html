@@ -2,7 +2,15 @@
 {{>navbar}}
 <body>
     <h1>Mentoring Registration</h1>
-    <form class="reg-form" action="/register" method="post">
+
+    {{#regsuccess}}
+      <h3 class="regsuccess">Registration Successful: {{successmsg}}</h3>
+    {{/regsuccess}}
+    {{#regfail}}
+      <h3 class="regfail">Registration Failed: {{failmsg}}</h3>
+    {{/regfail}}
+
+    <form class="reg-form" action="/register" method="post" modelAttribute="employee">
         <ul>
             <li>
                 <input type="text" class="field-style align-left" name="firstName" placeholder="First Name" />
@@ -10,6 +18,9 @@
             </li>
             <li>
                 <input type="email" class="field-style" name="email" placeholder="Email" />
+            </li>
+            <li>
+                <input type="passwd" class="field-style" name="password" placeholder="Password" />
             </li>
             <li>
                 <select class="field-style" name="title">
@@ -31,8 +42,8 @@
                 <input type="text" class="field-style" name="team" placeholder="Team" />
             </li>
             <li>
-                <input type="checkbox" name="mentor" value="true"> Be a Mentor
-                <input type="checkbox" name="mentee" value="true"> Be a Mentee
+                <input type="checkbox" name="beMentor" value="true"> Be a Mentor
+                <input type="checkbox" name="beMentee" value="true"> Be a Mentee
                 <span class="span-checkbox">(can choose both)</span>
             </li>
             <li>

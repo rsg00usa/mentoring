@@ -4,6 +4,20 @@ h1 {
   line-height: 2em;
 }
 
+.regsuccess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+}
+
+.regfail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
 .span-submit {
   color: red;
   margin-left: 50px;

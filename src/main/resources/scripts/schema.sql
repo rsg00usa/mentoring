@@ -12,9 +12,10 @@ CREATE TABLE employee (
     firstName VARCHAR(30) NOT NULL,
     lastName VARCHAR(30) NOT NULL,
     email TEXT NOT NULL PRIMARY KEY,
+    password VARCHAR(100) NOT NULL,
     title VARCHAR(20) NOT NULL,
     team VARCHAR(30) NOT NULL,
-    mentor VARCHAR(10),
-    mentee VARCHAR(10),
-    createDate DATE
+    beMentor VARCHAR(10),
+    beMentee VARCHAR(10),
+    registerDate DATE
 );
